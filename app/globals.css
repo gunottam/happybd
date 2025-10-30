@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-start: #ffc0cb; /* baby pink */
+  --bg-end: #bfe7ff; /* baby blue */
+  --glass: rgba(255, 248, 249, 0.85); /* pearl white with better opacity */
+  --text-primary: #4b0082; /* indigo for better contrast */
+  --text-secondary: #663399; /* purple for secondary text */
+}
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+body {
+  @apply antialiased;
+  background: radial-gradient(
+      1200px 800px at 20% 10%,
+      #ffe3ea 0%,
+      transparent 60%
+    ),
+    radial-gradient(1000px 800px at 80% 0%, #d8f1ff 0%, transparent 55%),
+    linear-gradient(120deg, var(--bg-start), var(--bg-end));
+}
+
+/* Glassmorphism helper */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Placeholder styling */
+.placeholder-box {
+  @apply border-2 border-dashed border-white/60 text-white/80 rounded-2xl p-6 text-center;
+}
+
+/* Confetti background */
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  opacity: 0.8;
+  animation: confetti 12s linear infinite;
+}
+
+/* Hide default cursor when using custom cursor */
+body.custom-cursor {
+  cursor: none;
+}
