@@ -5,12 +5,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 const media = [
-  { type: "image", src: "/Images/ig1.jpg", alt: "Birthday Image 1" },
-  { type: "image", src: "/Images/ig2.jpg", alt: "Birthday Image 2" },
-  { type: "image", src: "/Images/ig3.jpg", alt: "Birthday Image 3" },
-  { type: "image", src: "/Images/ig4.jpg", alt: "Birthday Image 4" },
+  { type: "image", src: "/Images/ig1.JPG", alt: "Birthday Image 1" },
+  { type: "image", src: "/Images/ig2.JPG", alt: "Birthday Image 2" },
+  { type: "image", src: "/Images/ig3.JPG", alt: "Birthday Image 3" },
+  { type: "image", src: "/Images/ig4.JPG", alt: "Birthday Image 4" },
   { type: "video", src: "/Images/vd1.mp4", alt: "Birthday Video" },
-  
 ];
 
 export default function Gallery() {
